@@ -267,7 +267,14 @@ export default function Home() {
             <div><p className="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#8de8f2]">Get in touch</p><div className="grid gap-3 text-sm text-white/70"><a href="tel:8037536800" className="flex items-center gap-2 hover:text-white"><Phone className="h-4 w-4" /> 803-753-6800</a><a href="mailto:info@midlandsmediagroup.com" className="flex items-center gap-2 hover:text-white"><Mail className="h-4 w-4" /> info@midlandsmediagroup.com</a><span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> 2412 Main Street, Columbia, SC</span></div></div>
             <div><p className="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#8de8f2]">Follow along</p><a href="https://www.facebook.com/931thelake/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/25 px-5 py-3 text-sm font-black uppercase tracking-[.1em] hover:border-[#8de8f2]"><span className="grid h-6 w-6 place-items-center rounded-full bg-white font-black text-[#061f2e]">f</span> Facebook</a></div>
           </div>
-          <div className="flex flex-col gap-4 pt-7 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between"><p>© 2026 93.1 The Lake · WZMJ-FM · Midlands Media Group</p><div className="flex flex-wrap gap-5"><a href="https://931thelakefm.com/contest-rules/" target="_blank" rel="noreferrer" className="hover:text-white">Contest Rules</a><a href="https://931thelakefm.com/contact/" target="_blank" rel="noreferrer" className="hover:text-white">Contact</a><a href="https://publicfiles.fcc.gov/fm-profile/wzmj" target="_blank" rel="noreferrer" className="hover:text-white">FCC Public File</a></div></div>
+          <div className="flex flex-col gap-6 pt-7 text-xs text-white/40 lg:flex-row lg:items-center lg:justify-between">
+            <p>© 2026 93.1 The Lake · WZMJ-FM · Midlands Media Group</p>
+            <div className="flex flex-wrap items-center gap-5"><a href="https://931thelakefm.com/contest-rules/" target="_blank" rel="noreferrer" className="hover:text-white">Contest Rules</a><a href="https://931thelakefm.com/contact/" target="_blank" rel="noreferrer" className="hover:text-white">Contact</a><a href="https://publicfiles.fcc.gov/fm-profile/wzmj" target="_blank" rel="noreferrer" className="hover:text-white">FCC Public File</a></div>
+            <a href="https://strataworks.tech" target="_blank" rel="noreferrer" aria-label="Site by StrataWorks" className="group flex w-fit items-center gap-3 rounded-xl border border-white/10 bg-white/[.04] px-3 py-2 transition hover:border-[#8de8f2]/50 hover:bg-white/[.08]">
+              <span className="font-bold uppercase tracking-[.14em] text-white/55 transition group-hover:text-white">Site by</span>
+              <span className="rounded-lg bg-white px-2 py-1"><Image src={asset('/images/strataworks-logo.png')} alt="StrataWorks" width={957} height={661} className="h-auto w-20" /></span>
+            </a>
+          </div>
         </div>
       </footer>
     </main>
