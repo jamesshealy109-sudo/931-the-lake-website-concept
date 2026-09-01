@@ -54,16 +54,16 @@ const hosts = [
     name: 'Tony Clyburn',
     role: 'Afternoons · Hometown Heroes',
     image: asset('/images/tony.jpg'),
-    accent: 'bg-[#ef5a47]',
+    accent: 'bg-[#f7ce46]',
     copy: 'Tony brings Columbia home with personality, heart, and the stories behind our community.',
   },
 ];
 
 const music = [
   { artist: 'Fleetwood Mac', song: 'Everywhere', color: 'bg-[#f7ce46]' },
-  { artist: 'Earth, Wind & Fire', song: 'September', color: 'bg-[#ef5a47]' },
+  { artist: 'Earth, Wind & Fire', song: 'September', color: 'bg-[#078bc7]' },
   { artist: 'Hall & Oates', song: 'You Make My Dreams', color: 'bg-[#8de8f2]' },
-  { artist: 'Elton John', song: 'I’m Still Standing', color: 'bg-[#d8b7ff]' },
+  { artist: 'Elton John', song: 'I’m Still Standing', color: 'bg-white' },
 ];
 
 export default function Home() {
@@ -82,13 +82,14 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f4f0e7] text-[#082d42]">
-      <header className="relative z-40 border-b border-[#082d42]/10 bg-white">
-        <div className="mx-auto flex h-24 max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
+    <main className="min-h-screen overflow-hidden bg-[#f7f7f4] text-[#111a50]">
+      <div className="bg-[#111a50] px-5 py-2 text-center text-[10px] font-black uppercase tracking-[.2em] text-white sm:text-left sm:px-8 lg:px-12"><div className="mx-auto max-w-[1360px]">WZMJ 93.1 FM · Columbia, South Carolina · Locally owned radio</div></div>
+      <header className="relative z-40 border-b-4 border-[#f7ce46] bg-white">
+        <div className="mx-auto flex h-24 max-w-[1360px] items-center justify-between px-5 sm:px-8 lg:px-10">
           <a href="#top" aria-label="93.1 The Lake home" className="shrink-0">
             <Image src={asset('/images/logo.png')} alt="93.1 The Lake" width={235} height={60} priority className="h-auto w-[180px] sm:w-[220px]" />
           </a>
-          <nav aria-label="Main navigation" className="hidden items-center gap-7 text-sm font-extrabold uppercase tracking-[0.11em] lg:flex">
+          <nav aria-label="Main navigation" className="hidden items-center gap-7 text-[13px] font-black uppercase tracking-[0.08em] lg:flex">
             <a href="#shows" className="transition hover:text-[#0d83b2]">On Air</a>
             <a href="#community" className="transition hover:text-[#0d83b2]">Community</a>
             <a href="#events" className="transition hover:text-[#0d83b2]">Events</a>
@@ -127,29 +128,26 @@ export default function Home() {
         </div>
       )}
 
-      <section id="top" className="relative isolate min-h-[760px] overflow-hidden bg-[#0d668a] text-white">
+      <section id="top" className="relative isolate min-h-[700px] overflow-hidden bg-[#078bc7] text-white">
         <Image src={asset('/images/lake-brand.jpg')} alt="Lake Murray under a bright Carolina sky" fill priority className="object-cover object-[62%_center]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,29,44,.84)_0%,rgba(3,43,64,.56)_42%,rgba(4,79,105,.08)_76%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-[#082d42]/75 to-transparent" />
-        <div className="absolute inset-0 opacity-10 [background-image:linear-gradient(rgba(255,255,255,.16)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.16)_1px,transparent_1px)] [background-size:72px_72px]" />
-        <div className="relative mx-auto flex min-h-[760px] max-w-[1440px] items-center px-5 pb-28 pt-16 sm:px-8 lg:px-12">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,26,80,.88)_0%,rgba(17,26,80,.58)_43%,rgba(7,139,199,.05)_78%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-60 bg-gradient-to-t from-[#111a50]/80 to-transparent" />
+        <div className="relative mx-auto flex min-h-[700px] max-w-[1360px] items-center px-5 pb-28 pt-12 sm:px-8 lg:px-10">
           <div className="max-w-4xl">
-            <div className="mb-6 flex items-center gap-3 text-xs font-black uppercase tracking-[0.22em] text-[#8de8f2] sm:text-sm"><Radio className="h-5 w-5" /> Live & local from the Midlands</div>
+            <div className="mb-6 flex items-center gap-3 text-xs font-black uppercase tracking-[0.18em] text-[#f7ce46] sm:text-sm"><Radio className="h-5 w-5" /> Columbia’s all-time favorites</div>
             <h1 className="max-w-4xl text-[clamp(4rem,8.5vw,8rem)] font-black uppercase leading-[.8] tracking-[-.06em]">
               Your favorites.<br/><span className="text-[#f7ce46]">Your Lake.</span>
             </h1>
             <div className="mt-9 flex flex-col gap-6 sm:flex-row sm:items-center">
               <a href={LIVE_URL} target="_blank" rel="noreferrer" className="group inline-flex w-fit items-center gap-4 rounded-full bg-white px-7 py-4 text-base font-black uppercase tracking-[0.12em] text-[#082d42] transition hover:-translate-y-1 hover:shadow-2xl">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#ef5a47] text-white"><Play className="h-4 w-4 fill-current" /></span>
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[#078bc7] text-white"><Play className="h-4 w-4 fill-current" /></span>
                 Listen live <ArrowUpRight className="h-5 w-5 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
               </a>
               <p className="max-w-md text-base leading-relaxed text-white/80 sm:text-lg">The songs you know by heart, the people you know by name, and everything happening around Columbia.</p>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-28 right-8 hidden rounded-2xl border border-white/25 bg-white/12 p-5 backdrop-blur-md xl:block">
-          <div className="flex items-center gap-3"><Sun className="h-7 w-7 text-[#f7ce46]" /><div><p className="text-[10px] font-black uppercase tracking-[.2em] text-[#8de8f2]">Made for the Midlands</p><p className="mt-1 font-bold">Columbia · Lexington · Lake Murray</p></div></div>
-        </div>
+        <div className="absolute bottom-28 right-10 hidden border-l-4 border-[#f7ce46] bg-[#111a50]/90 px-5 py-4 xl:block"><div className="flex items-center gap-3"><Sun className="h-7 w-7 text-[#f7ce46]" /><div><p className="text-[10px] font-black uppercase tracking-[.18em] text-[#8edcf3]">From the heart of the Midlands</p><p className="mt-1 font-bold">Columbia · Lexington · Lake Murray</p></div></div></div>
         <div className="absolute inset-x-0 bottom-0 border-t border-white/20 bg-[#082d42]/92 backdrop-blur-md">
           <div className="mx-auto flex max-w-[1440px] items-center gap-5 px-5 py-4 sm:px-8 lg:px-12">
             <a href={LIVE_URL} target="_blank" rel="noreferrer" aria-label="Play 93.1 The Lake" className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#f7ce46] text-[#082d42] transition hover:scale-105"><Play className="ml-0.5 h-5 w-5 fill-current" /></a>
@@ -178,16 +176,16 @@ export default function Home() {
 
       <section id="shows" className="px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-[1440px]">
-          <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div><p className="mb-3 text-xs font-black uppercase tracking-[.22em] text-[#0d83b2]">Meet your on-air neighbors</p><h2 className="text-5xl font-black uppercase leading-[.85] tracking-[-.055em] sm:text-7xl">Good company.<br/>All day long.</h2></div>
-            <p className="max-w-md text-lg leading-relaxed text-[#436272]">Real people. Real Columbia. And a music mix built for wherever your day takes you.</p>
+          <div className="mb-10 flex flex-col justify-between gap-6 border-b-4 border-[#111a50] pb-6 md:flex-row md:items-end">
+            <div><p className="mb-3 text-xs font-black uppercase tracking-[.18em] text-[#078bc7]">The voices of 93.1</p><h2 className="text-5xl font-black uppercase leading-[.9] tracking-[-.045em] sm:text-6xl">Live. Local.<br/>On The Lake.</h2></div>
+            <p className="max-w-md text-lg leading-relaxed text-[#536477]">Three familiar voices, one station, and a workday full of songs Columbia knows by heart.</p>
           </div>
           <div className="grid gap-5 lg:grid-cols-3">
             {hosts.map((host, index) => (
-              <article key={host.name} className="group relative overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_70px_rgba(8,45,66,.08)]">
+              <article key={host.name} className="group relative overflow-hidden border border-[#111a50]/15 bg-white">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image src={host.image} alt={host.name} fill className={`object-cover transition duration-700 group-hover:scale-105 ${index === 1 ? 'object-[center_32%]' : 'object-center'}`} />
-                  <div className={`absolute left-5 top-5 grid h-12 w-12 place-items-center rounded-full ${host.accent}`}><Mic2 className="h-5 w-5" /></div>
+                  <div className={`absolute left-0 top-0 grid h-12 w-12 place-items-center ${host.accent}`}><Mic2 className="h-5 w-5" /></div>
                 </div>
                 <div className="p-7">
                   <p className="text-[11px] font-black uppercase tracking-[.16em] text-[#0d83b2]">{host.role}</p>
@@ -197,7 +195,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <div className="mt-5 grid overflow-hidden rounded-2xl border border-[#082d42]/10 bg-[#dce8e7] sm:grid-cols-[auto_1fr_1fr_1fr]">
+          <div className="mt-5 grid overflow-hidden border border-[#111a50]/15 bg-[#e7f1f6] sm:grid-cols-[auto_1fr_1fr_1fr]">
             <div className="flex items-center gap-3 border-b border-[#082d42]/10 p-5 sm:border-b-0 sm:border-r"><Clock className="h-5 w-5 text-[#0d83b2]" /><span className="text-xs font-black uppercase tracking-[.15em]">Weekday rhythm</span></div>
             <div className="p-5 sm:text-center"><p className="font-black">Mornings with Brent</p><p className="text-sm text-[#436272]">Wake up local</p></div>
             <div className="border-y border-[#082d42]/10 p-5 sm:border-x sm:border-y-0 sm:text-center"><p className="font-black">Middays with Michelle</p><p className="text-sm text-[#436272]">Workday favorites</p></div>
@@ -209,10 +207,10 @@ export default function Home() {
       <section className="bg-[#082d42] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-[1440px]">
           <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
-            <div><p className="mb-4 text-xs font-black uppercase tracking-[.22em] text-[#8de8f2]">The soundtrack you already love</p><h2 className="text-5xl font-black uppercase leading-[.85] tracking-[-.055em] sm:text-7xl">Press play.<br/>Feel good.</h2><div className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#f7ce46]/50 px-4 py-2 font-black uppercase tracking-[.1em] text-[#f7ce46]"><Volume2 className="h-4 w-4" /> Familiar favorites, all day</div></div>
-            <div className="grid gap-3">
+            <div><p className="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#8de8f2]">The soundtrack you already love</p><h2 className="text-5xl font-black uppercase leading-[.9] tracking-[-.045em] sm:text-6xl">The music<br/>feels like home.</h2><div className="mt-8 inline-flex items-center gap-2 border-b-2 border-[#f7ce46] pb-2 font-black uppercase tracking-[.08em] text-[#f7ce46]"><Volume2 className="h-4 w-4" /> All-time favorites, all day</div></div>
+            <div className="border-t border-white/20">
               {music.map((track, index) => (
-                <div key={track.song} className="group flex items-center gap-5 rounded-2xl border border-white/10 bg-white/[.06] p-4 transition hover:bg-white/[.11] sm:p-5">
+                <div key={track.song} className="group flex items-center gap-5 border-b border-white/20 px-2 py-5 transition hover:bg-white/[.06] sm:px-4">
                   <div className={`grid h-12 w-12 shrink-0 place-items-center rounded-full ${track.color} text-[#082d42]`}><Play className="h-4 w-4 fill-current" /></div>
                   <span className="w-6 text-sm font-bold text-white/35">0{index + 1}</span>
                   <div className="min-w-0 flex-1"><p className="truncate text-lg font-black">{track.song}</p><p className="text-sm text-white/55">{track.artist}</p></div>
@@ -227,7 +225,7 @@ export default function Home() {
       <section id="community" className="relative overflow-hidden bg-[#0d83b2] px-5 py-24 text-white sm:px-8 lg:px-12 lg:py-32">
         <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full border-[70px] border-white/10" />
         <div className="relative mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
-          <div className="relative min-h-[430px] overflow-hidden rounded-[2rem]">
+          <div className="relative min-h-[430px] overflow-hidden border-4 border-white/20">
             <Image src={asset('/images/hometown-heroes.jpg')} alt="93.1 The Lake Hometown Heroes" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#082d42]/85 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between"><div><p className="text-xs font-black uppercase tracking-[.18em] text-[#f7ce46]">Weekdays</p><p className="mt-1 text-2xl font-black">6:10 · 9:10 · 1:10 · 6:10</p></div><Heart className="h-9 w-9 fill-[#ef5a47] text-[#ef5a47]" /></div>
@@ -248,7 +246,7 @@ export default function Home() {
             { title: 'DHEC Stroke Prevention', tag: 'Community health', copy: 'Local experts share the warning signs everyone in the Midlands should know.' },
             { title: 'SCDOT', tag: 'Keeping SC moving', copy: 'The people behind safer roads and the everyday work that keeps our state connected.' },
           ].map((story, index) => (
-            <article key={story.title} className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm">
+            <article key={story.title} className="border-t-4 border-[#f7ce46] bg-[#111a50]/35 p-6">
               <div className="flex items-center justify-between"><span className="text-[10px] font-black uppercase tracking-[.18em] text-[#f7ce46]">{story.tag}</span><span className="grid h-9 w-9 place-items-center rounded-full bg-white/15"><ShieldCheck className="h-4 w-4" /></span></div>
               <p className="mt-8 text-xs font-bold text-white/45">HERO STORY 0{index + 1}</p><h3 className="mt-2 text-2xl font-black uppercase">{story.title}</h3><p className="mt-3 leading-relaxed text-white/65">{story.copy}</p>
             </article>
@@ -258,20 +256,20 @@ export default function Home() {
 
       <section id="events" className="px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-[1440px]">
-          <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p className="text-xs font-black uppercase tracking-[.2em] text-[#0d83b2]">Around the Midlands</p><h2 className="mt-3 text-5xl font-black uppercase leading-[.86] tracking-[-.055em] sm:text-7xl">There’s always<br/>something happening.</h2></div><p className="max-w-md text-lg leading-relaxed text-[#436272]">A useful local hub—not another link farm. Here’s what Columbia is talking about right now.</p></div>
+          <div className="mb-10 flex flex-col justify-between gap-5 border-b-4 border-[#111a50] pb-6 md:flex-row md:items-end"><div><p className="text-xs font-black uppercase tracking-[.18em] text-[#078bc7]">Around the Midlands</p><h2 className="mt-3 text-5xl font-black uppercase leading-[.9] tracking-[-.045em] sm:text-6xl">Columbia,<br/>right now.</h2></div><p className="max-w-md text-lg leading-relaxed text-[#536477]">Local events, community news, and good things worth knowing about across the Midlands.</p></div>
           <div className="grid gap-5 lg:grid-cols-[1.15fr_.85fr]">
-            <div className="grid gap-4 rounded-[2rem] bg-[#f7ce46] p-6 sm:p-9">
+            <div className="grid gap-0 bg-[#f7ce46] p-6 sm:p-9">
               {[
                 { icon: Newspaper, label: 'Community', title: 'September is Library Card Sign-up Month', copy: 'Discover programs, digital resources, and a month of reasons to reconnect with your local library.' },
                 { icon: Sun, label: 'Family', title: 'Carolina Wildlife Garden is now open', copy: 'The State Museum’s newest outdoor experience brings native plants and Carolina habitats into focus.' },
                 { icon: Volume2, label: 'Local music', title: 'A new Gamecock anthem hits Columbia', copy: 'Singer-songwriter Mary English gives fans a fresh soundtrack for garnet-and-black season.' },
               ].map(({ icon: Icon, label, title, copy }) => (
-                <article key={title} className="grid gap-4 rounded-2xl bg-white/65 p-5 sm:grid-cols-[auto_1fr_auto] sm:items-center">
+                <article key={title} className="grid gap-4 border-b border-[#111a50]/20 bg-white/55 p-5 last:border-b-0 sm:grid-cols-[auto_1fr_auto] sm:items-center">
                   <span className="grid h-12 w-12 place-items-center rounded-full bg-[#082d42] text-white"><Icon className="h-5 w-5" /></span><div><p className="text-[10px] font-black uppercase tracking-[.18em] text-[#0d668a]">{label}</p><h3 className="mt-1 text-xl font-black">{title}</h3><p className="mt-2 text-sm leading-relaxed text-[#436272]">{copy}</p></div><span className="hidden text-xs font-black uppercase tracking-[.12em] text-[#082d42]/35 sm:block">Local</span>
                 </article>
               ))}
             </div>
-            <div id="win" className="relative flex min-h-[520px] flex-col justify-between overflow-hidden rounded-[2rem] bg-[#ef5a47] p-8 text-white sm:p-12">
+            <div id="win" className="relative flex min-h-[520px] flex-col justify-between overflow-hidden bg-[#111a50] p-8 text-white sm:p-12">
               <Sparkles className="absolute -right-10 -top-10 h-64 w-64 text-white/10" strokeWidth={1} />
               <div className="relative"><p className="flex items-center gap-2 text-xs font-black uppercase tracking-[.2em]"><Gift className="h-4 w-4" /> Current giveaway</p><h2 className="mt-4 text-5xl font-black uppercase leading-[.86] tracking-[-.055em] sm:text-6xl">Date night is back.</h2><p className="mt-5 text-lg font-bold text-[#f7ce46]">Dinner, drinks, and a night out in Columbia.</p></div>
               <div className="relative"><p className="mb-7 max-w-md leading-relaxed text-white/80">Drop your name in the hat for the latest Lake Date Night. No hunting through another page required.</p>
@@ -283,7 +281,7 @@ export default function Home() {
       </section>
 
       <section id="birthday" className="px-5 pb-24 sm:px-8 lg:px-12 lg:pb-32">
-        <div className="mx-auto grid max-w-[1440px] overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_80px_rgba(8,45,66,.08)] lg:grid-cols-[.8fr_1.2fr]">
+        <div className="mx-auto grid max-w-[1440px] overflow-hidden border border-[#111a50]/15 bg-white lg:grid-cols-[.8fr_1.2fr]">
           <div className="bg-[#dce8e7] p-8 sm:p-12"><Cake className="h-12 w-12 text-[#ef5a47]" /><h2 className="mt-8 text-4xl font-black uppercase leading-[.9] tracking-[-.04em] sm:text-5xl">Put their birthday on the radio.</h2><p className="mt-6 leading-relaxed text-[#436272]">Send Brent the details or call the studio weekday mornings. A little shoutout can make a very big day.</p></div>
           <div className="grid content-center gap-4 p-8 sm:p-12">
             {birthdaySent ? <div role="status" className="flex items-center gap-4 rounded-2xl bg-[#dce8e7] p-6"><span className="grid h-11 w-11 place-items-center rounded-full bg-[#f7ce46]"><Check /></span><div><p className="font-black uppercase">Shoutout requested.</p><p className="text-sm text-[#436272]">Brent’s got the birthday details.</p></div></div> : <form onSubmit={(event) => { event.preventDefault(); setBirthdaySent(true); }} className="grid gap-3 sm:grid-cols-2"><input required aria-label="Birthday person" placeholder="Birthday person’s name" className="h-12 rounded-xl border border-[#082d42]/15 px-4 outline-none focus:border-[#0d83b2]" /><input required aria-label="Your name" placeholder="Your name" className="h-12 rounded-xl border border-[#082d42]/15 px-4 outline-none focus:border-[#0d83b2]" /><input required type="date" aria-label="Birthday date" className="h-12 rounded-xl border border-[#082d42]/15 px-4 outline-none focus:border-[#0d83b2]" /><input aria-label="Special note" placeholder="A short birthday note" className="h-12 rounded-xl border border-[#082d42]/15 px-4 outline-none focus:border-[#0d83b2]" /><button className="mt-1 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#082d42] font-black uppercase tracking-[.1em] text-white sm:col-span-2">Request the shoutout <Send className="h-4 w-4" /></button></form>}
@@ -297,7 +295,7 @@ export default function Home() {
           <div><p className="mb-4 flex items-center gap-2 text-xs font-black uppercase tracking-[.22em] text-[#0d83b2]"><Radio className="h-5 w-5" /> Reach the Midlands</p><h2 className="text-5xl font-black uppercase leading-[.85] tracking-[-.055em] sm:text-7xl">Make your business part of the show.</h2><p className="mt-7 max-w-xl text-lg leading-relaxed text-[#436272]">Local radio works because local trust works. Put your message alongside the music, voices, and community moments Columbia already tunes in for.</p>
             <div className="mt-9 grid grid-cols-3 gap-3">{[{ value: '93.1', label: 'On the dial' }, { value: 'Local', label: 'Owned & operated' }, { value: 'Daily', label: 'Community connection' }].map((item) => <div key={item.label} className="rounded-2xl bg-[#f4f0e7] p-4"><p className="text-2xl font-black text-[#0d668a]">{item.value}</p><p className="mt-1 text-[10px] font-bold uppercase tracking-[.12em] text-[#436272]">{item.label}</p></div>)}</div>
           </div>
-          <div className="rounded-[2rem] bg-[#082d42] p-7 text-white sm:p-10">
+          <div className="border-t-8 border-[#f7ce46] bg-[#111a50] p-7 text-white sm:p-10">
             <p className="text-xs font-black uppercase tracking-[.2em] text-[#8de8f2]">Start a conversation</p><h3 className="mt-3 text-3xl font-black uppercase tracking-[-.04em]">Tell us what you’re building.</h3>
             {advertiserSent ? <div role="status" className="mt-7 flex items-center gap-4 rounded-2xl bg-white/10 p-6"><Check className="text-[#f7ce46]" /><div><p className="font-black">Message received.</p><p className="text-sm text-white/60">The sales team will be in touch.</p></div></div> : <form onSubmit={(event) => { event.preventDefault(); setAdvertiserSent(true); }} className="mt-7 grid gap-3 sm:grid-cols-2"><input required aria-label="Business name" placeholder="Business name" className="h-12 rounded-xl border border-white/15 bg-white/10 px-4 outline-none placeholder:text-white/45 focus:border-[#8de8f2]" /><input required aria-label="Your name" placeholder="Your name" className="h-12 rounded-xl border border-white/15 bg-white/10 px-4 outline-none placeholder:text-white/45 focus:border-[#8de8f2]" /><input required type="email" aria-label="Work email" placeholder="Work email" className="h-12 rounded-xl border border-white/15 bg-white/10 px-4 outline-none placeholder:text-white/45 focus:border-[#8de8f2] sm:col-span-2" /><textarea aria-label="Advertising goals" placeholder="What would you like to promote?" rows={4} className="rounded-xl border border-white/15 bg-white/10 p-4 outline-none placeholder:text-white/45 focus:border-[#8de8f2] sm:col-span-2" /><button className="mt-1 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#f7ce46] font-black uppercase tracking-[.1em] text-[#082d42] sm:col-span-2">Talk to the Lake <ArrowRight className="h-4 w-4" /></button></form>}
           </div>
