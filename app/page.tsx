@@ -25,26 +25,28 @@ import {
 import { FormEvent, useState } from 'react';
 
 const LIVE_URL = 'https://rdo.to/WZMJ';
+const ASSET_PREFIX = process.env.NEXT_PUBLIC_ASSET_PREFIX ?? '';
+const asset = (path: string) => `${ASSET_PREFIX}${path}`;
 
 const hosts = [
   {
     name: 'Brent Johnson',
     role: 'Mornings · Program Director',
-    image: '/images/brent.jpg',
+    image: asset('/images/brent.jpg'),
     accent: 'bg-[#f7ce46]',
     copy: 'Start your day with the songs, laughs, and local conversations that feel like home.',
   },
   {
     name: 'Michelle Renew',
     role: 'Middays · Creative Services',
-    image: '/images/michelle.jpg',
+    image: asset('/images/michelle.jpg'),
     accent: 'bg-[#8de8f2]',
     copy: 'The perfect soundtrack for the middle of your workday—familiar, upbeat, and easy.',
   },
   {
     name: 'Tony Clyburn',
     role: 'Afternoons · Hometown Heroes',
-    image: '/images/tony.jpg',
+    image: asset('/images/tony.jpg'),
     accent: 'bg-[#ef5a47]',
     copy: 'Tony brings Columbia home with personality, heart, and the stories behind our community.',
   },
@@ -71,7 +73,7 @@ export default function Home() {
       <header className="relative z-40 border-b border-[#082d42]/10 bg-white">
         <div className="mx-auto flex h-24 max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
           <a href="#top" aria-label="93.1 The Lake home" className="shrink-0">
-            <Image src="/images/logo.png" alt="93.1 The Lake" width={235} height={60} priority className="h-auto w-[180px] sm:w-[220px]" />
+            <Image src={asset('/images/logo.png')} alt="93.1 The Lake" width={235} height={60} priority className="h-auto w-[180px] sm:w-[220px]" />
           </a>
           <nav aria-label="Main navigation" className="hidden items-center gap-7 text-sm font-extrabold uppercase tracking-[0.11em] lg:flex">
             <a href="#shows" className="transition hover:text-[#0d83b2]">On Air</a>
@@ -92,7 +94,7 @@ export default function Home() {
       {menuOpen && (
         <div className="fixed inset-0 z-50 bg-[#082d42] p-6 text-white lg:hidden">
           <div className="flex items-center justify-between">
-            <Image src="/images/logo.png" alt="93.1 The Lake" width={190} height={49} className="h-auto w-44 brightness-0 invert" />
+            <Image src={asset('/images/logo.png')} alt="93.1 The Lake" width={190} height={49} className="h-auto w-44 brightness-0 invert" />
             <button onClick={() => setMenuOpen(false)} aria-label="Close menu" className="grid h-12 w-12 place-items-center rounded-full border border-white/30"><X /></button>
           </div>
           <nav className="mt-16 grid gap-2 text-4xl font-black uppercase tracking-[-.04em]">
@@ -111,7 +113,7 @@ export default function Home() {
       )}
 
       <section id="top" className="relative isolate min-h-[720px] overflow-hidden bg-[#0d668a] text-white">
-        <Image src="/images/lake-brand.jpg" alt="Lake Murray under a bright Carolina sky" fill priority className="object-cover object-center" />
+        <Image src={asset('/images/lake-brand.jpg')} alt="Lake Murray under a bright Carolina sky" fill priority className="object-cover object-center" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,29,44,.94)_0%,rgba(3,43,64,.74)_48%,rgba(4,79,105,.14)_100%)]" />
         <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,.16)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.16)_1px,transparent_1px)] [background-size:72px_72px]" />
         <div className="relative mx-auto flex min-h-[720px] max-w-[1440px] items-center px-5 pb-28 pt-16 sm:px-8 lg:px-12">
@@ -201,7 +203,7 @@ export default function Home() {
         <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full border-[70px] border-white/10" />
         <div className="relative mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div className="relative min-h-[430px] overflow-hidden rounded-[2rem]">
-            <Image src="/images/hometown-heroes.jpg" alt="93.1 The Lake Hometown Heroes" fill className="object-cover" />
+            <Image src={asset('/images/hometown-heroes.jpg')} alt="93.1 The Lake Hometown Heroes" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#082d42]/85 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between"><div><p className="text-xs font-black uppercase tracking-[.18em] text-[#f7ce46]">Weekdays</p><p className="mt-1 text-2xl font-black">6:10 · 9:10 · 1:10 · 6:10</p></div><Heart className="h-9 w-9 fill-[#ef5a47] text-[#ef5a47]" /></div>
           </div>
@@ -261,7 +263,7 @@ export default function Home() {
       <footer id="contact" className="bg-[#061f2e] px-5 py-16 text-white sm:px-8 lg:px-12">
         <div className="mx-auto max-w-[1440px]">
           <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1fr_auto_auto]">
-            <div><Image src="/images/logo.png" alt="93.1 The Lake" width={250} height={64} className="h-auto w-56 brightness-0 invert" /><p className="mt-5 max-w-md text-white/55">Columbia’s locally owned home for all-time favorites, familiar voices, and the community we share.</p></div>
+            <div><Image src={asset('/images/logo.png')} alt="93.1 The Lake" width={250} height={64} className="h-auto w-56 brightness-0 invert" /><p className="mt-5 max-w-md text-white/55">Columbia’s locally owned home for all-time favorites, familiar voices, and the community we share.</p></div>
             <div><p className="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#8de8f2]">Get in touch</p><div className="grid gap-3 text-sm text-white/70"><a href="tel:8037536800" className="flex items-center gap-2 hover:text-white"><Phone className="h-4 w-4" /> 803-753-6800</a><a href="mailto:info@midlandsmediagroup.com" className="flex items-center gap-2 hover:text-white"><Mail className="h-4 w-4" /> info@midlandsmediagroup.com</a><span className="flex items-center gap-2"><MapPin className="h-4 w-4" /> 2412 Main Street, Columbia, SC</span></div></div>
             <div><p className="mb-4 text-xs font-black uppercase tracking-[.18em] text-[#8de8f2]">Follow along</p><a href="https://www.facebook.com/931thelake/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/25 px-5 py-3 text-sm font-black uppercase tracking-[.1em] hover:border-[#8de8f2]"><span className="grid h-6 w-6 place-items-center rounded-full bg-white font-black text-[#061f2e]">f</span> Facebook</a></div>
           </div>
