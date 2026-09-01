@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+:root {
+  --background: #f4f0e7;
+  --foreground: #082d42;
+  --card: #ffffff;
+  --card-foreground: #082d42;
+  --primary: #0d668a;
+  --primary-foreground: #ffffff;
+  --secondary: #f7ce46;
+  --secondary-foreground: #082d42;
+  --muted: #dce8e7;
+  --muted-foreground: #436272;
+  --accent: #ef5a47;
+  --accent-foreground: #ffffff;
+  --border: #cbd9d9;
+  --input: #cbd9d9;
+  --ring: #0d668a;
+  --radius: 1rem;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: var(--foreground); }
+a, button { -webkit-tap-highlight-color: transparent; }
+::selection { background: #f7ce46; color: #082d42; }
